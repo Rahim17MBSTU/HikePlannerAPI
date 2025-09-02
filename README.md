@@ -38,7 +38,7 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 - **Entity Framework Core**
 - **AutoMapper**
 - **SQL Server** 
-- **Swagger for API testing
+- **Swagger for API testing**
 - **GitHub** for version control
   
 ---
