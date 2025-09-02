@@ -1,6 +1,6 @@
 # HikePlannerAPI
 
-A **RESTful ASP.NET Core Web API** for managing Walks, Regions, and Difficulties. This project demonstrates **CRUD Operation, Repository Pattern, DTOs, AutoMapper, Data Annotations** in a professional web API.
+A **RESTful ASP.NET Core Web API** for managing Walks, Regions, and Difficulties. This project demonstrates **CRUD Operation, maintain separation of concern in using Repository Pattern, DTOs, AutoMapper, Data Annotations** in a professional web API.
 
 ---
 
