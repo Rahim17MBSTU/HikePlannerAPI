@@ -11,9 +11,10 @@ A **RESTful ASP.NET Core Web API** for managing Walks, Regions, and Difficulties
 - [Entities](#entities)
 - [API Endpoints](#api-endpoints)
 - [Setup Instructions](#setup-instructions)
+<!--
 - [Future Improvements](#future-improvements)
-- [Author](#author)
-
+- [Author](#auth
+-->
 ---
 
 ## Project Overview
