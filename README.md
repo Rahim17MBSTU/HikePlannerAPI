@@ -11,7 +11,8 @@ A **RESTful ASP.NET Core Web API** for managing Walks, Regions, and Difficulties
 - [Entities](#entities)
 - [API Endpoints](#api-endpoints)
 - [Setup Instructions](#setup-instructions)
-- [Screenshots](#screenshorts)
+- [Screenshots](#screenshots)
+  
 <!--
 - [Future Improvements](#future-improvements)
 - [Author](#auth
@@ -128,6 +129,7 @@ dotnet run
 - Open: https://localhost:5001/swagger/index.html
 - Or use Postman
 
+---
 
 ## Screenshots
 
