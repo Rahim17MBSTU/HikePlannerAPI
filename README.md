@@ -110,8 +110,8 @@ dotnet restore
 ```
 
 4. **Configure the database**
-# Update appsettings.json with your SQL Server connection string
-# Or use In-Memory database for testing
+- Update appsettings.json with your SQL Server connection string
+- Or use In-Memory database for testing
 
 5. **Apply migrations**
 ```bash
@@ -123,8 +123,8 @@ dotnet run
 ```
 
 7. **Test API using Swagger**
-# Open: https://localhost:5001/swagger/index.html
-# Or use Postman
+- Open: https://localhost:5001/swagger/index.html
+- Or use Postman
 
 
 ### Screenshots
