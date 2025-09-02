@@ -97,7 +97,7 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 
 ## Setup Instructions
 
-1.**Clone the repository**
+1. **Clone the repository**
 ```bash
 
 git clone https://github.com/Rahim17MBSTU/HikePlannerAPI.git
