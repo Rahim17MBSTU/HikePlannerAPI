@@ -87,11 +87,12 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 | PUT    | /api/regions/{id} | Update a region |
 | DELETE | /api/regions/{id} | Delete a region |
 
+<!--
 ### Difficulties
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET    | /api/difficulties | Get all difficulty levels |
-
+-->
 ---
 
 ## Setup Instructions
