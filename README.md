@@ -102,3 +102,14 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 
 git clone https://github.com/Rahim17MBSTU/HikePlannerAPI.git
 
+
+---
+
+## Screenshots
+
+### Swagger UI
+
+
+### Example Walks GET Request
+
+
