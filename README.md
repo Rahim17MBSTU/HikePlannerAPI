@@ -97,19 +97,22 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 
 ## Setup Instructions
 
-1. **Clone the repository**
+**Clone the repository**
 ```bash
 
 git clone https://github.com/Rahim17MBSTU/HikePlannerAPI.git
 
+```
+### Screenshots
 
----
-
-## Screenshots
+### Main UI
+![Main UI](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/7836b71d0eaaa8ebf3c070627f066b616c7c1d07/Main%20UI.png?raw=true)
 
 ### Swagger UI
-
+![Swagger UI](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/main/Screenshots/swagger.png?raw=true)
 
 ### Example Walks GET Request
+![Walks GET](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/main/Screenshots/walks-get.png?raw=true)
+
 
 
