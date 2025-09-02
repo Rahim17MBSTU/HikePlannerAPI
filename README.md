@@ -132,7 +132,7 @@ dotnet run
 ### Main UI
 ![Main UI](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/7836b71d0eaaa8ebf3c070627f066b616c7c1d07/Main%20UI.png?raw=true)
 
-### Swagger UI
+### Example Region GetById Request
 ![GetById](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/1ae2de08a68c7b7245dcd976196f75e612149970/GetById.png)
 
 ### Example Walks GET Request
