@@ -98,11 +98,11 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 ## Setup Instructions
 
 1. **Clone the repository**
-```bash
+  ```bash
 
-git clone https://github.com/Rahim17MBSTU/HikePlannerAPI.git
+  git clone https://github.com/Rahim17MBSTU/HikePlannerAPI.git
 
-```
+  ```
 2. **Open in Visual Studio 2022 or VS Code**
 3. **Install Dependencies**
 ```bash
