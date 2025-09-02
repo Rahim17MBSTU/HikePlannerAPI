@@ -97,12 +97,36 @@ The API follows **clean architecture principles** and **RESTful standards**, mak
 
 ## Setup Instructions
 
-**Clone the repository**
+1.**Clone the repository**
 ```bash
 
 git clone https://github.com/Rahim17MBSTU/HikePlannerAPI.git
 
 ```
+2. **Open in Visual Studio 2022 or VS Code**
+3. **Install Dependencies**
+```bash
+dotnet restore
+```
+
+4. **Configure the database**
+# Update appsettings.json with your SQL Server connection string
+# Or use In-Memory database for testing
+
+5. **Apply migrations**
+```bash
+dotnet ef database update
+```
+6. **Run the API**
+```bash
+dotnet run
+```
+
+7. **Test API using Swagger**
+# Open: https://localhost:5001/swagger/index.html
+# Or use Postman
+
+
 ### Screenshots
 
 ### Main UI
