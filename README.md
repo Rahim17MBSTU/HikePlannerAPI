@@ -133,7 +133,7 @@ dotnet run
 ![Main UI](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/7836b71d0eaaa8ebf3c070627f066b616c7c1d07/Main%20UI.png?raw=true)
 
 ### Swagger UI
-![GetById]([https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/main/Screenshots/swagger.png?raw=true](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/a813b1e8607c845c470b4514bb43a73f78fb1920/GetById.png))
+![GetById](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/1ae2de08a68c7b7245dcd976196f75e612149970/GetById.png)
 
 ### Example Walks GET Request
 ![Walks GET](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/3af52bb22930c7b68b01e86dddcc7003bfc5ba38/Walks%20GET.png?raw=true)
