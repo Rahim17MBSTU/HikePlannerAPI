@@ -129,7 +129,7 @@ dotnet run
 - Or use Postman
 
 
-### Screenshots
+## Screenshots
 
 ### Main UI
 ![Main UI](https://github.com/Rahim17MBSTU/HikePlannerAPI/blob/7836b71d0eaaa8ebf3c070627f066b616c7c1d07/Main%20UI.png?raw=true)
