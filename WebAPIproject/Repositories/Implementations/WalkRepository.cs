@@ -33,11 +33,12 @@ namespace WebAPIproject.Repositories.Implementations
             return existWalkDTO;
         }
 
-        public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null)
+        public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null,
+            string? sortBy = null, bool isAscending = true)
         {
             var walks = _context.Walks.Include(p => p.Region).Include(p => p.Difficulty).AsQueryable();
-            //Filtering operation perform
             
+            //----------------Filtering operation------------------------
             if (string.IsNullOrWhiteSpace(filterOn) == false && string.IsNullOrWhiteSpace(filterQuery) == false)// FilterOn and FilterQuery value are not Null/Empty/whiteSpace
             {
                 //Walk.Name
@@ -55,6 +56,19 @@ namespace WebAPIproject.Repositories.Implementations
                 else if (filterOn.Equals("Name", StringComparison.OrdinalIgnoreCase))
                 {
                     walks = walks.Where(p => p.Difficulty.Name.Contains(filterQuery));
+                }
+            }
+
+            //----------------Sorting Operation-------------------------
+            if (!string.IsNullOrWhiteSpace(sortBy))
+            {
+                if (sortBy.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = isAscending ? walks.OrderBy(p => p.Name) : walks.OrderByDescending(p => p.Name);
+                }
+                else if (sortBy.Equals("Length",StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = isAscending ? walks.OrderBy(p => p.Length) : walks.OrderByDescending(p => p.Length);
                 }
             }
             
