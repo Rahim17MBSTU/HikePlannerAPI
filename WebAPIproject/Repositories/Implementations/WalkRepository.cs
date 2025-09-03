@@ -34,7 +34,7 @@ namespace WebAPIproject.Repositories.Implementations
         }
 
         public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null,
-            string? sortBy = null, bool isAscending = true)
+            string? sortBy = null, bool isAscending = true, int pageNumber = 1, int pageSize = 10)
         {
             var walks = _context.Walks.Include(p => p.Region).Include(p => p.Difficulty).AsQueryable();
             
@@ -71,8 +71,11 @@ namespace WebAPIproject.Repositories.Implementations
                     walks = isAscending ? walks.OrderBy(p => p.Length) : walks.OrderByDescending(p => p.Length);
                 }
             }
-            
-            return await walks.ToListAsync();
+
+            //----------------Pagination operation ----------------------
+            var skipResults = (pageNumber - 1) * pageSize ;
+
+            return await walks.Skip(skipResults).Take(pageSize).ToListAsync();
             //return await _context.Walks.Include(p => p.Region).Include(p=>p.Difficulty). ToListAsync();    
         }
         public async Task<Walk?> GetByIdAsync(Guid id)

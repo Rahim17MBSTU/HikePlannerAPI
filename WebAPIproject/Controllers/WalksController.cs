@@ -20,12 +20,12 @@ namespace WebAPIproject.Controllers
             _walkRepository = walkRepository;
         }
         //Get all walk
-        //GET: /api/Walks?filterOn=Name&filterQuery=Value&sortBy=name&isAsending=true
+        //GET: /api/Walks?filterOn=Name&filterQuery=Value&sortBy=name&isAscending=true&pageNumber=1&pageSize=5
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery, 
-            [FromQuery] string? sortBy, [FromQuery] bool? isAscending)
+            [FromQuery] string? sortBy, [FromQuery] bool? isAscending, [FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
         {
-            var walks = await _walkRepository.GetAllAsync(filterOn,filterQuery,sortBy,isAscending?? true);
+            var walks = await _walkRepository.GetAllAsync(filterOn,filterQuery,sortBy,isAscending?? true,pageNumber, pageSize);
             if (walks == null)
             {
                 return NotFound();
