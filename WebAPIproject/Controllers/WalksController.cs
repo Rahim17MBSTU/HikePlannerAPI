@@ -20,10 +20,11 @@ namespace WebAPIproject.Controllers
             _walkRepository = walkRepository;
         }
         //Get all walk
+        //GET: /api/Walks?filterOn=Name&filterQuery=Value
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string? filterOn, [FromQuery] string? filterQuery)
         {
-            var walks = await _walkRepository.GetAllAsync();
+            var walks = await _walkRepository.GetAllAsync(filterOn,filterQuery);
             if (walks == null)
             {
                 return NotFound();

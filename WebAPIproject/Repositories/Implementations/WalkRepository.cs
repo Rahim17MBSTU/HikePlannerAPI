@@ -33,11 +33,34 @@ namespace WebAPIproject.Repositories.Implementations
             return existWalkDTO;
         }
 
-        public async Task<List<Walk>> GetAllAsync()
+        public async Task<List<Walk>> GetAllAsync(string? filterOn = null, string? filterQuery = null)
         {
-            return await _context.Walks.Include(p => p.Region).Include(p=>p.Difficulty). ToListAsync();    
-        }
+            var walks = _context.Walks.Include(p => p.Region).Include(p => p.Difficulty).AsQueryable();
+            //Filtering operation perform
+            
+            if (string.IsNullOrWhiteSpace(filterOn) == false && string.IsNullOrWhiteSpace(filterQuery) == false)// FilterOn and FilterQuery value are not Null/Empty/whiteSpace
+            {
+                //Walk.Name
+                if (filterOn.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = walks.Where(p => p.Name.Contains(filterQuery));
+                }
 
+                //Walk.Region.Name -> filter by the related Region Name
+                else if (filterOn.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = walks.Where(p => p.Region.Name.Contains(filterQuery));
+                }
+                //walk.Difficulty.Name
+                else if (filterOn.Equals("Name", StringComparison.OrdinalIgnoreCase))
+                {
+                    walks = walks.Where(p => p.Difficulty.Name.Contains(filterQuery));
+                }
+            }
+            
+            return await walks.ToListAsync();
+            //return await _context.Walks.Include(p => p.Region).Include(p=>p.Difficulty). ToListAsync();    
+        }
         public async Task<Walk?> GetByIdAsync(Guid id)
         {
             var walkDomainModel = await _context.Walks.Include(p=>p.Difficulty).Include(p=>p.Region).FirstOrDefaultAsync(p => p.Id == id);
